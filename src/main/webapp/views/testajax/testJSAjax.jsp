@@ -17,6 +17,13 @@
             document.getElementById("test2").onclick = function(){
                 console.log("리턴 정보 : " + typeof(createXHRequest()));
             }
+            document.getElementById("test3").onclick = function(){
+                //alert("server return : " + testGetRequest());
+                console.log("server return : " + testGetRequest());
+            }
+            document.getElementById("test4").onclick = function(){
+                testPOSTRequest();
+            }
         };
 
     </script>
@@ -25,13 +32,19 @@
     <h1>testJSAjax page</h1>
     <hr>
     <h2>1. 브라우저의 XMLHttpRequest 지원 여부 확인</h2>
-    <button id="test1" >XMLHttpRequest</button>
+    <button id="test1" >XMLHttpRequest</button><br>
 
     <hr>
     <h2>2. XMLHttpRequest 객체 생성 확인</h2>
-    <button id="test2">XMLHttpRequest 객체 생성 확인</button>
+    <button id="test2">XMLHttpRequest 객체 생성 확인</button><br>
 
+    <hr>
+    <h2>3. 서버로 값을 보내고, 결과를 문자열로 받는 방식 : GET 방식</h2>
+    <button id="test3">GET 방식으로 서버로 값 보내고 문자열 받기</button><br>
+    <input type="text" name="username" id="username"><br>
 
-
+    <hr>
+    <h2>4. 서버로 값들을 전송하고, 결과를 안 받는 경우 : POST 방식 </h2>
+    <button id="test4">테스트</button>
 </body>
 </html>
