@@ -5,9 +5,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>testa</title>
+    <script type="text/javascript" src="/testa/resources/js/ajaxByJavascript.js"></script>
+    <script type="text/javascript">
+        // 자바 스크립트에서 태그의 이벤트 설정과 작동 처리를 한다면 
+        // window.onload 이벤트 안에 태그의 이벤트 설정을 해야 함
+        window.onload = function(){
+            document.getElementById("test1").onclick = function(){
+                checkNativeBrowser();
+            };
+            document.getElementById("test2").onclick = function(){
+                console.log("리턴 정보 : " + typeof(createXHRequest()));
+            }
+        };
+
+    </script>
 </head>
 <body>
-    
+    <h1>testJSAjax page</h1>
+    <hr>
+    <h2>1. 브라우저의 XMLHttpRequest 지원 여부 확인</h2>
+    <button id="test1" >XMLHttpRequest</button>
+
+    <hr>
+    <h2>2. XMLHttpRequest 객체 생성 확인</h2>
+    <button id="test2">XMLHttpRequest 객체 생성 확인</button>
+
+
+
 </body>
 </html>
