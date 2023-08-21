@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<members>
+    <member>
+        <userid>lss77</userid>
+        <username>이순신</username>
+        <age>45</age>
+        <gender>M</gender>
+        <email>lss77@ict.org</email>
+        <phone>010-9999-9999</phone>
+    </member>
+    <member>
+        <userid>user01</userid>
+        <username>홍길동</username>
+        <age>25</age>
+        <gender>M</gender>
+        <email>hong@ict.org</email>
+        <phone>010-1111-1111</phone>
+    </member>
+    <member>
+        <userid>user02</userid>
+        <username>신사임당</username>
+        <age>45</age>
+        <gender>F</gender>
+        <email>sin@ict.org</email>
+        <phone>010-2222-2222</phone>
+    </member>
+</members>

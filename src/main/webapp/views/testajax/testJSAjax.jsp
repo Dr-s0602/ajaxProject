@@ -24,6 +24,9 @@
             document.getElementById("test4").onclick = function(){
                 testPOSTRequest();
             }
+            document.getElementById("test5").onclick = function(){
+                document.getElementById("p5").innerHTML = loadFromXML();
+            }
         };
 
     </script>
@@ -46,5 +49,10 @@
     <hr>
     <h2>4. 서버로 값들을 전송하고, 결과를 안 받는 경우 : POST 방식 </h2>
     <button id="test4">테스트</button>
+
+    <hr>
+    <h2>5. XML 파일을 서버로 부터 로드하여, 각 노드의 값들을 출력 처리하는 방법</h2>
+    <p id="p5" style="width: 500px;height: 25px;border: 1px solide red;"></p>
+    <button id="test5">읽어온 xml 값 출력하기</button>
 </body>
 </html>
