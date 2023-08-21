@@ -64,8 +64,8 @@ function testPOSTRequest(){
 
 }
 function loadFromXML(){
-    let xhRequest;
-    let values = "";
+    var xhRequest;
+    var values = "";
     if(window.XMLHttpRequest){
         xhRequest = new XMLHttpRequest();
     }else{
@@ -79,9 +79,10 @@ function loadFromXML(){
     xhRequest.onreadystatechange = function(){
         if(xhRequest.readyState == 4){
             if(xhRequest.status == 200){
-                var xmlDoc = xhRequest.respaonseXML;
-                 // 서버로 부터 읽은 XML 값을 변수에 저장
+	            var xmlDoc = xhRequest.responseXML;
+                // 서버로 부터 읽은 XML 값을 변수에 저장
                 var member = xmlDoc.getElementsByTagName("member");
+                //var mem = xmlDoc.getElementsByTagName("member");
                 //xml 파일안의 member 엘리먼트 3개가 배열로 저장
                 //member 엘리먼트 안의 child element 들 추출
                 var userid = xmlDoc.getElementsByTagName("userid");
@@ -97,16 +98,17 @@ function loadFromXML(){
                 var phone = xmlDoc.getElementsByTagName("phone");
                 //phone 3개 추출
                 
-                //for(var index = 0; index < member.length; index++){
-                for(var index in member){
-                    valuses += "userid : " + userid[index].firstChild.nodeValue;
-                    valuses += ", username : " + username[index].firstChild.nodeValue;
-                    valuses += ", age : " + age[index].firstChild.nodeValue;
-                    valuses += ", gender : " + gender[index].firstChild.nodeValue;
-                    valuses += ", email : " + email[index].firstChild.nodeValue;
-                    valuses += ", phone : " + phone[index].firstChild.nodeValue + "<br/>";
-                }
-
+                for(var index = 0; index < member.length; index++){
+                //for(var index in member){
+                    values += "userid : " + userid[index].firstChild.nodeValue;
+                    values += ", username : " + username[index].firstChild.nodeValue;
+                    values += ", age : " + age[index].firstChild.nodeValue;
+                    values += ", gender : " + gender[index].firstChild.nodeValue;
+                    values += ", email : " + email[index].firstChild.nodeValue;
+                    values += ", phone : " + phone[index].firstChild.nodeValue + "<br/>";
+                } // node 취급시에는 for in   사용하지 말것
+                console.log(values);
+                document.getElementById("p5").innerHTML = values;
             }else{
                 alert("요청 오류 : " + xhRequest.status);
             }

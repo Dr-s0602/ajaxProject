@@ -52,7 +52,7 @@
 
     <hr>
     <h2>5. XML 파일을 서버로 부터 로드하여, 각 노드의 값들을 출력 처리하는 방법</h2>
-    <p id="p5" style="width: 500px;height: 25px;border: 1px solide red;"></p>
+    <p id="p5" style="width: 500px;height: 250px;border: 1px solid red;"></p>
     <button id="test5">읽어온 xml 값 출력하기</button>
 </body>
 </html>
