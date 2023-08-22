@@ -1,0 +1,8 @@
+/.metadata/
+*.xml
+
+/.classes
+
+/.lib
+
+/.jspwork
